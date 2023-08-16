@@ -1,4 +1,4 @@
-package day37_overriding_pollymorphizm;
+package day37_overridin_pollymorphisim;
 
 public class AParent {
 
