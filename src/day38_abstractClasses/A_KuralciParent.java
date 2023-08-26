@@ -1,18 +1,40 @@
 package day38_abstractClasses;
 
 public abstract class A_KuralciParent {
+    /*
+    Class adina abstract yazmak gerekir ancak , biz bir child class oluşturup Child Classi
+    bu Class'a extend etmemiz tek başina abstraction yapmamiza yetmez.
+    tercihimiz net, Chil Classlari abstract Class'ina mecbur etmemiz,  burada iki türlü absraction kardimiza cikar.
+    BAKIN, Class'i abstract yapmak sadece kismi abstraction saglar demistik.
+    asagida 3 ve 4. metodlari abstract yapacagiz. 1 ve 2. metodlari da serbest biraktik.
+    su anda Classimizda abstract edilen ve zorunlu kilinmayan methodlarimiz oldugundan kismi abstraction saglanmis oldu.
+    Biz biliyoruz ki, Abstract Parent Classlardan OBJE OLUSTURULMAZ. Bu cati Class'in Child Classlari ise
+    abstract edilen  public abstract void method3(); ve
+                     public abstract void method4();' i
+     OVERRIDE etmek ZORUNDADIRLAR. O yuzden bu metodlarin body leri Child Class'larda olacagindan,
+    A_KuralciParent Classinda bulunan bu metodlarin BODY'si olmaz, amac, metodun varliginin burada
+    ama bady'sinin ise Child'de olusturulmasidir. Burada onların bir body'ye ihtiyaci vardir.
+    Arabada lastik olmali ama lastigin ozelligine karismaz. soyut olması bu yuzdendir. body'siz olmasidir.
+    biz 3 ve 4. metodu da abstract yaptigimizda, ve Child Class'i bu Class'a extend ettigimizde,
+    intellij, bize zorunlu metodlarin bulundugunu ve implement etmemiz gerektigi uyarisini verir.
+    */
 
     public void method1(){
+
         System.out.println("parent method 1");
     }
     public void method2(){
+
         System.out.println("parent method 2");
     }
-    public abstract void method3();
+    public abstract void method3(); // public void
 
-    public abstract void method4();
+    public abstract void method4(); // public void
 
-    public abstract void method5();
+    public abstract void method5();  //public void
+    // gunun birinde proje devam ederken, bu kuralci parent'a bir tane daha abstract metod eklemek istedik,
+    // o zaman, Child'i olan child ve child2 de kirmizi isiklar yanmaya baslar. onlarin da bu abstract metodu
+    // implement etmesi istenir.
 
     public void method6(){
         System.out.println("parent method 6");

@@ -1,6 +1,6 @@
 package day38_abstractClasses;
 
-public class E_Doktor extends D_Personel{
+public class E_Doktor extends D_Personel {
 
     @Override
     public void standartMaas() {
@@ -20,5 +20,8 @@ public class E_Doktor extends D_Personel{
     @Override
     public void ozelSigorta() {
         System.out.println("Doktorlar 1000 tl katki ile full guvenlik sigortasi yaptirabilir");
+
+        // public void ozelSigorta(){} u, abstract bir metod OLMAMASINA ragmen CODE-GENERADE-OVERRIDE METHODS
+        // kismindan bu metodu da istersek overrride edebiliriz. ve ettik de.
     }
 }
