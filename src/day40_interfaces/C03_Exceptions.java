@@ -15,20 +15,26 @@ public class C03_Exceptions {
         int sayi1 = scanner.nextInt();
         int sayi2 = scanner.nextInt();
 
-        /*
+/*
+
         if (sayi2 == 0){
             System.out.println("Ikinci sayi SIFIR olamaz");
         }else {
             System.out.println(sayi1/sayi2);
         }
-         */
+
+        bu basit soruda if else ile exeption vermemesi icin cozum uretebiliriz. Ancak kompleks sorularda
+        if/Else 'in gucu buna yetmeyebilir.
+*/
 
 
         try {
-            System.out.println(sayi1/sayi2); // riskli kod arithmeticException
-        } catch (ArithmeticException e) {
-            System.out.println("Ikinci sayi SIFIR olamaz");
+            System.out.println(sayi1/sayi2); // riskli kod arithmeticException /RunTimeExeption/Unchacked
+            // sen buradaki islemi yapmaya calisirken,
+        } catch (ArithmeticException e) { // bir exception yakalarsan,
+            System.out.println("İkinci sayi SIFIR olamaz.");; // sana ne dersem onu yap.
         }
+
 
 
         /*

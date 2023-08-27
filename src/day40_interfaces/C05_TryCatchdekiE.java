@@ -5,7 +5,7 @@ public class C05_TryCatchdekiE {
     public static void main(String[] args) {
         /*
             try catch blogundaki e
-            yakalanan exception'in atandigi variable'dir
+            yakalanan exception'in atandigi variable'dir. yani objenin adidir.
 
          */
 
@@ -15,6 +15,7 @@ public class C05_TryCatchdekiE {
         try {
             System.out.println(a/b);
         } catch (ArithmeticException k) { // ArithmeticException e = yakalananException
+            // ArithmeticException Classindan bir obje olustutur, objenin adi e objesidir.
 
             k.printStackTrace(); // exception'in tum bilgilerini yazdirir,
             // System.out.println(k.getMessage()); //  / by zero
