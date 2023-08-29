@@ -19,7 +19,20 @@ public class C02_MultipleExceptions {
 
 
         int girilenIndex= 0;
-        /* 1- birden fazla try catch blogu olusturabiliriz
+
+        /*
+        Sorunun normal cozumunu bu sekilde ogrenmisitk ama bu 3 satirlik kodun her satirinda birbirinden farkli
+        exceptions olabilir, bakalim.
+        girilenIndex = scanner.nextInt(); burada InputMismatchException ihtimali vardir.
+        System.out.println(str.charAt(girilenIndex)); StringIndexOutOfBoundsException ihtimali var.
+        System.out.println(arr[girilenIndex]);  ArrayIndexOutOfBoundsException ihtimali var.
+        */
+
+
+        /* 1- yukarida commit icerisindeki cozumde yer alan exceptions ihtimallerine karsi
+        birden fazla try catch blogu olusturabilir ve her exception icin ayri ayri try/catch bloklari
+        olusturabiliriz.
+
         try {
             girilenIndex = scanner.nextInt();
         } catch (InputMismatchException e) {
@@ -42,7 +55,8 @@ public class C02_MultipleExceptions {
 
          */
 
-        /* 2- bir try birden fazla catch yazabiliriz
+        /* 2- yukaridaki Try/catch denemesi cok uzun oldu, bir try birden fazla catch yazabiliriz,
+
 
         try{
             girilenIndex = scanner.nextInt();
@@ -55,6 +69,11 @@ public class C02_MultipleExceptions {
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Girilen index array'in sinirlari disinda");
         }
+        ONEMLİ ===>>>
+        buradaki yapi da if/else deki gibidir. catch bloklarindan birini calistirdiginde geri kalan bloklara
+        bakmaz, calistirdigi catch blogu ile exception olusan satir arasinda kalan tüm satirlari IGNORE EDER.
+        Ornegin, 63. satirda StringIndexOutOfBoundsException olusursa, 67. satira kalan kod bloklari
+        IGNORE EDILIR, görmezden gelinir.
 
          */
 
@@ -65,7 +84,9 @@ public class C02_MultipleExceptions {
             girilenIndex = scanner.nextInt();
             System.out.println(str.charAt(girilenIndex));
             System.out.println(arr[girilenIndex]);
-        } catch (Exception e) { // RuntimeException
+        } catch (Exception e) {
+            // RuntimeException
+            // Exception Classi, diger tum exception turlerinin atasidir.
 
             System.out.println("Kod calistirilirken bir hata ile karsilasildi");
             e.printStackTrace();
@@ -85,12 +106,12 @@ public class C02_MultipleExceptions {
         Birden fazla exception olasiligi varsa
         asagidaki adimlarla ilerlemek gerekir
 
-        1- olusmasi muhtemel exception'lar icin parent - child iliskisi yoksa
+        1- olusmasi muhtemel exception'lar icin parent - child iliskisi YOKSA
             - her biri icin ayri try-catch
             - bir try, her bir exception icin ayri catch
             - bir try ve olasi tum exception'lari kapsayan genel bir catch
             
-        2- olusmasi muhtemel exception'lar arasinda parent child iliskisi varsa
+        2- olusmasi muhtemel exception'lar arasinda parent child iliskisi VARSA
             - birden fazla catch cumlesi yazilacaksa, once child, sonra parent yazilabilir
             - sadece parent yazilabilir
 

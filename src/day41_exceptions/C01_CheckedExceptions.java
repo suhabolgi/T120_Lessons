@@ -9,7 +9,7 @@ public class C01_CheckedExceptions {
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        FileInputStream fis = new FileInputStream("src/day41_exceptions/dosya.txt");
+        FileInputStream fis = new FileInputStream("day41_exceptions/dosya.txt");
 
 
         // String str = 23;   CTE
@@ -26,7 +26,7 @@ public class C01_CheckedExceptions {
 
         Java dosya okuma islemini yapmasini istedigimizde
         o dosyaya erisememe durumunda ne yapilmasi gerektigini bilmek ister
-        bunun icin de kodun altini kirmizi cizer
+        bunun icin de 'new FileInputStream' kodunun altini kirmizi cizer
 
         Compile Time Exceptions (Checked Exceptions) icin 2 ihtimal vardir
         1- standart exceptions gibi try - catch blogu ile sarmalayabiliriz

@@ -20,14 +20,23 @@ public class C01_LinkedList_List {
 
 
         System.out.println(isimler.retainAll(ikinciList)); // true
+        // isimler objesine git, buradaki isimlerden,  ikinci listde de ayni isimde olan elementler varsa onu
+        // bulur gerisini siler. silme islemini isimler objesinden yapar. ikinciList elemanlari ayni durur.
+
 
         System.out.println(isimler); // [Cemil]
-        // ortak elemanlar disindaki tum elemanlari siler
+        // retainAll ortak elemanlar disindaki tum elemanlari siler. matenatiktedki gibi dusundugumuzde
+        // iki listenin kesisimini alir.
 
         System.out.println(ikinciList); // [Mustafa, Cemil]
 
 
         ikinciList.retainAll(isimler);
+        // ikinci listteki [Mustafa, Cemil] elemanlari, isimler listin'de yer alan elementlerle aynı ise, ayni olanlari
+        // ikinciListten siler. isimler objesinde kalan eleman sadece [Cemil] oldugundan (27. satir.)
+        // aynı isimler [Cemil] oldugundan onu saklar,[Mustafa] ismini List'den siler.
+
+
 
         System.out.println(ikinciList); // [Cemil]
 
