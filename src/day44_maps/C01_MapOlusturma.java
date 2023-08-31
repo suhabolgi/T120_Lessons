@@ -16,6 +16,7 @@ public class C01_MapOlusturma {
 
         System.out.println(ogrenciMap);
 
+
         /*{
         101=ali-Can_11-H-MF,
         102=Veli-Cem-10-K-TM,

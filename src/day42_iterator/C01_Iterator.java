@@ -17,6 +17,10 @@ public class C01_Iterator {
             tum elementleri bize getirebilecek
             ve bizim tum elementleri manipule edebilmemize izin verecek
             Iterator ve ListIterator interface'lerini olusturmustur
+
+            ==> Iterator bir Classtir, birInterface'dir. Bunlar üzerinden obje olusturulamaz.
+            ==> Iterator her bir elementi TEK TEK yuklenir. TEK TEK işler , TEK TEK siler. Korsir mantigi ile calisir.
+            ==> Indeks kullanmaz.
          */
 
         int[] arr = {3,4,5,6};

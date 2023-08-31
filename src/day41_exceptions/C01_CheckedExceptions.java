@@ -26,7 +26,10 @@ public class C01_CheckedExceptions {
 
         Java dosya okuma islemini yapmasini istedigimizde
         o dosyaya erisememe durumunda ne yapilmasi gerektigini bilmek ister
-        bunun icin de 'new FileInputStream' kodunun altini kirmizi cizer
+        bunun icin de 'new FileInputStream' kodunun altini kirmizi cizer.
+
+        ==> Java bir hata firlattiginda, turunu, sebebini, satirini, kodun normaldısı sonlandigini konsolda soyler.
+        ==>
 
         Compile Time Exceptions (Checked Exceptions) icin 2 ihtimal vardir
         1- standart exceptions gibi try - catch blogu ile sarmalayabiliriz
@@ -35,7 +38,7 @@ public class C01_CheckedExceptions {
 
         2- Eger exception olustugunda kodun calismaya devam etmesini ISTEMIYORSAK
            veya kodumuzdan emin oldugumuz icin bu riski onemsemiyorsak
-           exception'i handle etmek yerine
+           exception'i handle etmek (yönetmek) yerine
            Java'ya SEN CALISMANA BAK, biz exception riskinin farkindayiz demek istiyorsak
            method deklarasyonuna THROWS keyword ile bekledigimiz exception'i yazabiliriz
 
